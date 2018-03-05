@@ -1,0 +1,17 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: rest-spring-deployment
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+       name: container-rest-spring
+    spec:
+      containers:
+        - name: container-rest-spring
+          image: testekubernetes
+          ports:
+            - containerPort: 8010
+     

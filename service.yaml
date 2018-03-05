@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: rest-spring-service
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 8010
+      name: http
+  selector:
+    name: container-rest-spring
