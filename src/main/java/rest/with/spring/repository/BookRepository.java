@@ -1,10 +1,9 @@
 package rest.with.spring.repository;
 
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.repository.PagingAndSortingRepository;
 
 import rest.with.spring.model.Book;
 
-public interface BookRepository extends CrudRepository<Book, Long>{
+public interface BookRepository extends PagingAndSortingRepository<Book, Long>{
 
 }

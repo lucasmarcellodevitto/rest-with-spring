@@ -1,6 +1,7 @@
 package rest.with.spring.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import rest.with.spring.model.Book;
@@ -12,8 +13,8 @@ public class BookService {
 	@Autowired
 	private BookRepository bookRepository;
 
-	public Iterable<Book> findAll() {
-		return this.bookRepository.findAll();
+	public Iterable<Book> findAll(Pageable pageable) {
+		return this.bookRepository.findAll(pageable);
 	}
 
 	public Book save(Book book) {
