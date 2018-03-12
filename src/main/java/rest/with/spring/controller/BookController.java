@@ -36,9 +36,9 @@ public class BookController {
 	@GetMapping(path = "/{id}")
 	public ResponseEntity<?> findById(@PathVariable("id") Long id) {
 
-		Book book = this.bookService.findOne(id);
-
 		verifyIfBookExist(id);
+
+		Book book = this.bookService.findOne(id);
 
 		return new ResponseEntity<>(book, HttpStatus.OK);
 	}
@@ -57,9 +57,9 @@ public class BookController {
 
 	@DeleteMapping(path = "/{id}")
 	public ResponseEntity<?> datele(@PathVariable("id") Long id) {
-		
+
 		verifyIfBookExist(id);
-		
+
 		this.bookService.delete(id);
 
 		return new ResponseEntity<>(HttpStatus.OK);
