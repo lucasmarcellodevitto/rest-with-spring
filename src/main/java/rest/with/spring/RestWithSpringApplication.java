@@ -22,7 +22,9 @@ public class RestWithSpringApplication {
 	
 	@Bean
 	public boolean setUser() {
-		 userService.save(new User("Lucas", true, "lu_devitto", "123456"));
-		return true;
+		 
+		this.userService.save(new User("Lucas", true, "lu_devitto", "123456"));
+		
+		 return true;
 	}
 }
