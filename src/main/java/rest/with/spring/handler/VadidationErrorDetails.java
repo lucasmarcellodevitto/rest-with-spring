@@ -16,11 +16,11 @@ public class VadidationErrorDetails extends ErrorDetail {
 		private long timestamp;
 
 		private String developerMessage;
-		
+
 		private String field;
-		
+
 		private String fieldMessage;
-		
+
 		private Builder() {
 
 		}
@@ -54,17 +54,17 @@ public class VadidationErrorDetails extends ErrorDetail {
 			this.developerMessage = developerMessage;
 			return this;
 		}
-		
+
 		public Builder field(String field) {
 			this.field = field;
 			return this;
 		}
-		
+
 		public Builder fieldMessage(String fieldMessage) {
 			this.fieldMessage = fieldMessage;
 			return this;
 		}
-		
+
 		public VadidationErrorDetails build() {
 
 			VadidationErrorDetails vadidationErrorDetails = new VadidationErrorDetails();
@@ -76,7 +76,7 @@ public class VadidationErrorDetails extends ErrorDetail {
 			vadidationErrorDetails.setDeveloperMessage(developerMessage);
 			vadidationErrorDetails.setField(field);
 			vadidationErrorDetails.setFieldMessage(fieldMessage);
-			
+
 			return vadidationErrorDetails;
 		}
 	}
