@@ -17,8 +17,7 @@ public class Book {
 	@NotEmpty
 	private String title;
 
-	@NotEmpty
-	private Long numberOfPages;
+	private long numberOfPages;
 
 	public Long getId() {
 		return id;
@@ -36,11 +35,11 @@ public class Book {
 		this.title = title;
 	}
 
-	public Long getNumberOfPages() {
+	public long getNumberOfPages() {
 		return numberOfPages;
 	}
 
-	public void setNumberOfPages(Long numberOfPages) {
+	public void setNumberOfPages(long numberOfPages) {
 		this.numberOfPages = numberOfPages;
 	}
 
